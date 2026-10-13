@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wellbore-flow"
+version = "0.0.1"
+description = "Wellbore and pipe flow calculations: single- and two-phase pressure drop, conduit geometry and sand transport."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Javid Shiriyev" }
+]
+keywords = ["petroleum engineering", "production engineering", "pipe flow", "multiphase flow", "sand transport"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Manufacturing",
+    "Topic :: Scientific/Engineering",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Natural Language :: English"
+]
+dependencies = [
+    "numpy>=1.26.4",
+    "scipy>=1.13.0",
+    "reservoir-properties @ git+https://github.com/jshiriyev/reservoir-properties.git"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-xdist",
+    "ruff",
+    "mypy"
+]
+plots = [
+    "matplotlib"
+]
+
+[project.urls]
+Homepage = "https://github.com/jshiriyev/wellbore-flow"
+Documentation = "https://github.com/jshiriyev/wellbore-flow/tree/main/docs"
+Issues = "https://github.com/jshiriyev/wellbore-flow/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["wellflow*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+    ".git",
+    ".pytest_cache",
+    "docs",
+    "pytest-cache-files-*"
+]

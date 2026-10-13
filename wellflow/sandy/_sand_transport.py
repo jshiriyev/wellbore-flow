@@ -2,8 +2,8 @@ import numpy as np
 
 import numbers
 
-from prodpy.wellflow._conduit_slice import ConduitSlice
-from prodpy.wellflow._annular_conduit import AnnularConduit
+from wellflow._conduit_slice import ConduitSlice
+from wellflow._annular_conduit import AnnularConduit
 
 class SandTransport:
     """

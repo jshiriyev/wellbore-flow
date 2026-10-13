@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from prodpy.wellflow import AnnularConduit, CircularConduit
+from wellflow import AnnularConduit, CircularConduit
 
 
 def corrected_inner_height(outer_diameter: float, inner_diameter: float, height: float) -> float:

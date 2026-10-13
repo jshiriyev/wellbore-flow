@@ -4,8 +4,8 @@ import numpy as np
 
 from resprops import Fluid
 
-from prodpy.wellflow._pipe import Pipe
-from prodpy.wellflow.onephase._darcy_weisbach import DarcyWeisbach
+from wellflow._pipe import Pipe
+from wellflow.onephase._darcy_weisbach import DarcyWeisbach
 
 DarcyWeisbach.LOWER_REYNOLDS_LIMIT = 1000
 DarcyWeisbach.UPPER_REYNOLDS_LIMIT = 2000
